@@ -44,16 +44,16 @@ export default {
     fontSize: normalize(26),
     fontFamily: fonts.bold,
   },
-  homeNumber: {
-    fontSize: normalize(160),
-    fontFamily: fonts.bold,
-  },
   bigBody: {
     fontSize: normalize(30),
     fontFamily: fonts.bold,
   },
   vigitScore: {
     fontSize: normalize(72),
+    fontFamily: fonts.bold,
+  },
+  homeNumber: {
+    fontSize: normalize(160),
     fontFamily: fonts.bold,
   },
 };

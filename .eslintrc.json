@@ -1,0 +1,54 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "env": {
+    "jest": true,
+    "react-native/react-native": true
+  },
+  "plugins": ["react", "react-native", "prettier"],
+  "parser": "babel-eslint",
+  "rules": {
+    "react/jsx-filename-extension": [0],
+    "react/forbid-prop-types": [
+      2,
+      {
+        "forbid": ["array", "object"]
+      }
+    ],
+    "no-tabs": "off",
+    "indent": "off",
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
+    "computed-property-spacing": "off",
+    "quote-props": "off",
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2, 2],
+    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "prefer-const": "off",
+    "no-param-reassign": "off",
+    "import/no-named-as-default": "off",
+    "function-paren-newline": "off",
+    "global-require": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "default-case": "off",
+    "react/prefer-stateless-function": "off",
+    "class-methods-use-this": "off",
+    "react/no-array-index-key": "off",
+    "no-return-assign": "off",
+    "no-plusplus": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "printWidth": 100,
+        "trailingComma": "es5",
+        "singleQuote": true
+      }
+    ]
+  }
+}

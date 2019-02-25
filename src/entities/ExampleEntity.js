@@ -1,14 +1,11 @@
+/* eslint-disable */
 class ExampleEntity {
-  constructor(
-    field
-  ) {
-    this.field
+  constructor(field) {
+    this.field;
   }
 
   static fromJSON(properties) {
-    return new Cocktail(
-      properties.field_api,
-    );
+    return new Cocktail(properties.field_api);
   }
 }
 

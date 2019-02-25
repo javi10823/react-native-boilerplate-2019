@@ -4,7 +4,6 @@ const initialState = {
   isFetching: true,
 };
 
-
 export default (state = initialState, action) => {
   switch (action.type) {
     case TYPE_EXAMPLE:
