@@ -32,12 +32,8 @@ export const goToPage = (componentId, page, props) => {
 export const goBack = componentId => Navigation.pop(componentId);
 
 // register all screens of the app (including internal ones)
+// prettier-ignore
 export function registerScreens() {
-  Navigation.registerComponent('welcome', () => Welcome);
-  Navigation.registerComponentWithRedux(
-    'welcomeWithRedux',
-    () => WelcomeWithRedux,
-    Provider,
-    store
-  );
+  Navigation.registerComponentWithRedux( 'welcome', () => Welcome, Provider, store );
+  Navigation.registerComponentWithRedux( 'welcomeWithRedux', () => WelcomeWithRedux, Provider, store );
 }
