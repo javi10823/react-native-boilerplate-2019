@@ -1,0 +1,9 @@
+rootProject.name = 'boilerplate032019056'
+
+include ':app'
+
+include ':react-native-navigation'
+project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/lib/android/app/')
+
+include ':react-native-linear-gradient'
+project(':react-native-linear-gradient').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linear-gradient/android')

@@ -1,0 +1,57 @@
+{
+  "name": "boilerplate032019056",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "lint": "yarn run lint:js",
+    "lint:js": "eslint \"./**/*.js\" --cache",
+    "lint:fix": "yarn run lint -- --fix",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js . --ext .js",
+    "eslint-fix": "node ./node_modules/eslint/bin/eslint.js . --fix --ext .js",
+    "clear": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start -- --reset-cache",
+    "clear-pods": "pod cache clean --all;rm -rf ~/Library/Caches/CocoaPods; rm -rf Pods; rm -rf ~/Library/Developer/Xcode/DerivedData/*; pod deintegrate; pod setup; pod install;"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint"
+    }
+  },
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts/"
+    ]
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-native": "^3.5.0",
+    "prop-types": "^15.6.2",
+    "react": "16.4.1",
+    "react-native": "0.56.0",
+    "react-native-navigation": "2.0.2641",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "remote-redux-devtools": "^0.5.13"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "babel-preset-react-native": "^5",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^1.2.0",
+    "jest": "23.6.0",
+    "prettier": "^1.16.4",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
