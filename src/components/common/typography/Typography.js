@@ -5,17 +5,17 @@ import PropTypes from 'prop-types';
 import colors from '../../../theme/Colors';
 import variants from './styles';
 
-const Typography = ({ color, variant, children, numberOfLines, textAlign, style }) => (
+const Typography = ({ color, variant, children, textAlign, style, ...props }) => (
   <Text
     style={[
       {
         color: colors[color],
-        ...variants[variant],
+        ...variant,
         textAlign,
       },
       style,
     ]}
-    numberOfLines={numberOfLines}
+    {...props}
   >
     {children}
   </Text>
@@ -23,19 +23,18 @@ const Typography = ({ color, variant, children, numberOfLines, textAlign, style 
 
 Typography.propTypes = {
   color: PropTypes.string,
-  variant: PropTypes.string,
+  variant: PropTypes.any,
   children: PropTypes.node.isRequired,
-  numberOfLines: PropTypes.number,
   textAlign: PropTypes.string,
   style: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
 };
 
 Typography.defaultProps = {
-  variant: 'midBody',
+  variant: variants.midBody,
   color: 'white',
-  numberOfLines: null,
   textAlign: 'center',
   style: {},
 };
 
 export default Typography;
+export { default as variants } from './styles';

@@ -17,8 +17,12 @@ export default {
     fontSize: normalize(13),
     fontFamily: fonts.regular,
   },
-  bodyTitleRegular: {
+  bodyTitle: {
     fontSize: normalize(18),
+    fontFamily: fonts.regular,
+  },
+  title: {
+    fontSize: normalize(20),
     fontFamily: fonts.regular,
   },
   //
@@ -28,32 +32,24 @@ export default {
     fontSize: normalize(12),
     fontFamily: fonts.bold,
   },
-  loginLink: {
+  loginLinkBold: {
     fontSize: normalize(14),
     fontFamily: fonts.bold,
   },
-  bodyTitle: {
+  bodyTitleBold: {
     fontSize: normalize(16),
     fontFamily: fonts.bold,
   },
-  scaledLoginLink: {
+  scaledLoginLinkBold: {
     fontSize: normalize(24),
     fontFamily: fonts.bold,
   },
-  bigTitle: {
+  bigTitleBold: {
     fontSize: normalize(26),
     fontFamily: fonts.bold,
   },
-  bigBody: {
+  bigBodyBold: {
     fontSize: normalize(30),
-    fontFamily: fonts.bold,
-  },
-  vigitScore: {
-    fontSize: normalize(72),
-    fontFamily: fonts.bold,
-  },
-  homeNumber: {
-    fontSize: normalize(160),
     fontFamily: fonts.bold,
   },
 };
