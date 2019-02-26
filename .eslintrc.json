@@ -1,17 +1,30 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
   "env": {
     "jest": true,
     "react-native/react-native": true
   },
-  "plugins": ["react", "react-native", "prettier"],
+  "plugins": [
+    "react",
+    "react-native",
+    "prettier"
+  ],
   "parser": "babel-eslint",
   "rules": {
-    "react/jsx-filename-extension": [0],
+    "react/jsx-filename-extension": [
+      0
+    ],
     "react/forbid-prop-types": [
       2,
       {
-        "forbid": ["array", "object"]
+        "forbid": [
+          "array",
+          "object"
+        ]
       }
     ],
     "no-tabs": "off",
@@ -20,8 +33,14 @@
     "no-underscore-dangle": "off",
     "computed-property-spacing": "off",
     "quote-props": "off",
-    "react/jsx-indent": [2, 2],
-    "react/jsx-indent-props": [2, 2],
+    "react/jsx-indent": [
+      2,
+      2
+    ],
+    "react/jsx-indent-props": [
+      2,
+      2
+    ],
     "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": [
       "error",
@@ -39,6 +58,7 @@
     "react/prefer-stateless-function": "off",
     "class-methods-use-this": "off",
     "react/no-array-index-key": "off",
+    "no-nested-ternary": "off",
     "no-return-assign": "off",
     "no-plusplus": "off",
     "prettier/prettier": [

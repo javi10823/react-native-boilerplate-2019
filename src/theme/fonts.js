@@ -1,5 +1,5 @@
 export default {
   bold: 'Nunito-Bold',
-  regular: 'Nunito-Light',
+  regular: 'Nunito-Regular',
   light: 'Nunito-Light',
 };

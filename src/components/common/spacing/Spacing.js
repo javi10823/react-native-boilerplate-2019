@@ -3,23 +3,23 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import spacings from './styles';
 
-const Spacing = ({ size, horizontal }) => {
-  const spacingSize = spacings[size];
-  const spacing = spacingSize;
+const Spacing = ({ variant, horizontal }) => {
   return !horizontal ? (
-    <View style={{ height: spacing, width: '100%' }} />
+    <View style={{ height: variant, width: '100%' }} />
   ) : (
-    <View style={{ height: '100%', width: spacing }} />
+    <View style={{ height: '100%', width: variant }} />
   );
 };
 
 Spacing.propTypes = {
-  size: PropTypes.string.isRequired,
+  variant: PropTypes.any,
   horizontal: PropTypes.bool,
 };
 
 Spacing.defaultProps = {
+  variant: spacings.base,
   horizontal: false,
 };
 
 export default Spacing;
+export { default as variants } from './styles';
