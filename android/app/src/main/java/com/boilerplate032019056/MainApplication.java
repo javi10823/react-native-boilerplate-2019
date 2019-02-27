@@ -1,4 +1,4 @@
-package com.vigit;
+package com.boilerplate032019056;
 
 import android.app.Application;
 

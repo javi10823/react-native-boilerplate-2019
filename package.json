@@ -11,7 +11,9 @@
     "eslint": "node ./node_modules/eslint/bin/eslint.js . --ext .js",
     "eslint-fix": "node ./node_modules/eslint/bin/eslint.js . --fix --ext .js",
     "clear": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start -- --reset-cache",
-    "clear-pods": "pod cache clean --all;rm -rf ~/Library/Caches/CocoaPods; rm -rf Pods; rm -rf ~/Library/Developer/Xcode/DerivedData/*; pod deintegrate; pod setup; pod install;"
+    "clear-pods": "pod cache clean --all;rm -rf ~/Library/Caches/CocoaPods; rm -rf Pods; rm -rf ~/Library/Developer/Xcode/DerivedData/*; pod deintegrate; pod setup; pod install;",
+    "fix-android-release": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "android-build": "yarn run fix-android-release && react-native run-android"
   },
   "husky": {
     "hooks": {
