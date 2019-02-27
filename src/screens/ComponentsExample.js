@@ -60,11 +60,7 @@ const styles = StyleSheet.create({
 });
 
 class Welcome extends React.Component {
-  static options() {
-    return {
-      topBar: { visible: false },
-    };
-  }
+  static options = () => ({ topBar: { visible: false, height: 0 } });
 
   render() {
     const { componentId } = this.props;

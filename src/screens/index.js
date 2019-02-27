@@ -17,6 +17,12 @@ export const initApp = () =>
           },
         ],
       },
+      options: {
+        topBar: {
+          visible: false,
+          drawBehind: true,
+        },
+      },
     },
   });
 
