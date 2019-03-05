@@ -9,7 +9,7 @@ const Typography = ({ color, variant, children, textAlign, style, ...props }) =>
   <Text
     style={[
       {
-        color: colors[color],
+        ...color,
         ...variant,
         textAlign,
       },
@@ -31,7 +31,7 @@ Typography.propTypes = {
 
 Typography.defaultProps = {
   variant: variants.midBody,
-  color: 'white',
+  color: colors.white,
   textAlign: 'center',
   style: {},
 };
