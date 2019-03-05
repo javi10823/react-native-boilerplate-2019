@@ -34,6 +34,13 @@ const Errors = {
   ID_DUPLICATED_MSG: 'Duplicate Name',
 };
 
+function _Error({ code, message }) {
+  this.code = code;
+  this.message = message || 'Default Message';
+}
+_Error.prototype = Object.create(Error.prototype);
+_Error.prototype.constructor = _Error;
+
 export default class APIConnector {
   constructor(options = {}) {
     const { timeout = 0 } = options;
@@ -128,7 +135,7 @@ export default class APIConnector {
         logger.info(`request ${method}: ${uri} completed, took: ${+new Date() - time}ms`);
 
         if (!response.ok && response.status === 503) {
-          reject(new Error({ code: 503, message: Errors.SERVER_ERROR_MSG }));
+          reject(new _Error({ code: 503, message: Errors.SERVER_ERROR_MSG }));
         }
 
         if (response && (response.status === 500 || response.status === 404)) {
@@ -140,13 +147,13 @@ export default class APIConnector {
           ) {
             reject(response.json());
           } else {
-            reject(new Error({ code: 500, message: Errors.SERVER_ERROR_MSG }));
+            reject(new _Error({ code: 500, message: Errors.SERVER_ERROR_MSG }));
           }
         }
 
         if (response.status === 413) {
           reject(
-            new Error({
+            new _Error({
               code: Errors.REQUEST_ENTITY_TOO_LARGE,
               message: Errors.REQUEST_ENTITY_TOO_LARGE_MSG,
             })
@@ -159,7 +166,7 @@ export default class APIConnector {
 
         if (response.status === 400) {
           reject(
-            new Error({
+            new _Error({
               code: Errors.ID_DUPLICATED,
               message: Errors.ID_DUPLICATED_MSG,
             })
@@ -168,7 +175,7 @@ export default class APIConnector {
 
         if (response.status === 401) {
           reject(
-            new Error({
+            new _Error({
               code: Errors.UNAUTHORIZED_ERROR,
               message: Errors.UNAUTHORIZED_ERROR_MSG,
             })
@@ -211,16 +218,16 @@ export default class APIConnector {
       xhr.onload = () => {
         logger.info(`request ${options.method}: ${uri} completed, took: ${+new Date() - time}ms`);
         if (xhr.status !== 200) {
-          reject(new Error({ code: xhr.status, message: xhr.responseText }));
+          reject(new _Error({ code: xhr.status, message: xhr.responseText }));
         }
         if (!xhr.responseText) {
           // eslint-disable-next-line no-console
           console.log('Upload failed No response payload.');
-          reject(new Error({ code: 500, message: xhr.responseText }));
+          reject(new _Error({ code: 500, message: xhr.responseText }));
         }
         let index = xhr.responseText.indexOf('arcor.com');
         if (index !== -1) {
-          reject(new Error({ code: 500, message: xhr.responseText }));
+          reject(new _Error({ code: 500, message: xhr.responseText }));
         }
         resolve(xhr.responseText);
       };
