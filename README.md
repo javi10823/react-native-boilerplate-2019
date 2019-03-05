@@ -65,3 +65,11 @@ Go to Xcode, File -> Project Settings then change the Build System Default to Le
 - https://prettier.io/
 
 :v: **Enjoy!**
+
+TODO:
+
+- Install react-native-vector-icons
+- redux example
+- redux-form example with material-text-field
+- login/logout example with asyncStorage example
+- actions with await - no use cb
