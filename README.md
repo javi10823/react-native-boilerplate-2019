@@ -69,8 +69,10 @@ Go to Xcode, File -> Project Settings then change the Build System Default to Le
 TODO:
 
 - Install react-native-vector-icons
-- redux example
+- redux example (clean reducers on logout)
 - redux-form example with material-text-field (validations with spanish/english configuration in config.js)
 - login/logout example with asyncStorage example
 - actions with await - no use cb
 - defaultStyleCommonComponents in theme
+- example of use modal with react-native-navigation
+- example of use component didAppear with redux-form chageFieldValue

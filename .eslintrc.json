@@ -33,6 +33,7 @@
     "no-underscore-dangle": "off",
     "computed-property-spacing": "off",
     "quote-props": "off",
+    "no-console": "off",
     "react/jsx-indent": [
       2,
       2
@@ -58,9 +59,11 @@
     "react/prefer-stateless-function": "off",
     "class-methods-use-this": "off",
     "react/no-array-index-key": "off",
-    "no-nested-ternary": "off",
     "no-return-assign": "off",
+    "camelcase": "off",
     "no-plusplus": "off",
+    "no-nested-ternary": "off",
+    "react/destructuring-assignment": 1,
     "prettier/prettier": [
       "error",
       {
