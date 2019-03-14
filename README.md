@@ -11,19 +11,17 @@
 
 ```
 $ yarn install
-
-$ react-native link ./assets/fonts
 ```
 
 ## Rename project
 
-### Install React Native Rename Globaly
+### Install React Native Rename Globaly (optional)
 
 ```
 $ yarn global add react-native-rename
 ```
 
-### Rename the project
+### Rename the project (optional)
 
 ```
 $ react-native-rename <newName>
@@ -31,9 +29,8 @@ $ react-native-rename <newName>
 
 ## launch iOS
 
+`$ cd ios && pod install`
 `$ react-native run-ios`
-
-`ios && pod install`
 
 ###### If you have an Error at building app iOS (Mac's Xcode 10 users)
 
