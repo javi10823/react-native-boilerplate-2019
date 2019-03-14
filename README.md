@@ -29,8 +29,10 @@ $ react-native-rename <newName>
 
 ## launch iOS
 
-`$ cd ios && pod install`
-`$ react-native run-ios`
+```
+$ cd ios && pod install
+$ react-native run-ios
+```
 
 ###### If you have an Error at building app iOS (Mac's Xcode 10 users)
 
