@@ -13,15 +13,15 @@
 $ yarn install
 ```
 
-## Rename project
+## Rename project (optional)
 
-### Install React Native Rename Globaly (optional)
+### Install React Native Rename Globaly
 
 ```
 $ yarn global add react-native-rename
 ```
 
-### Rename the project (optional)
+### Rename the project
 
 ```
 $ react-native-rename <newName>
